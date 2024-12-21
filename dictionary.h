@@ -1,39 +1,14 @@
-// Contains the translation of all letters and numbers
+#ifndef DICTIONARY_H
+#define DICTIONARY_H
+#include <stddef.h>
 
-char A[] = ".-";
-char B[] = "-...";
-char C[] = "-.-.";
-char D[] = "-..";
-char E[] = ".";
-char F[] = "..-.";
-char G[] = "--.";
-char H[] = "....";
-char I[] = "..";
-char J[] = ".---";
-char K[] = "-.-";
-char L[] = ".-..";
-char M[] = "--";
-char N[] = "-.";
-char O[] = "---";
-char P[] = ".--.";
-char Q[] = "--.-";
-char R[] = ".-.";
-char S[] = "...";
-char T[] = "-";
-char U[] = "..-";
-char V[] = "...-";
-char W[] = ".--";
-char X[] = "-..-";
-char Y[] = "-.--";
-char Z[] = "--..";
+typedef struct {
+    char *morse;
+    char letter;
+} MorseCode;
 
-char one[] = ".----";
-char two[] = "..---";
-char three[] = "...--";
-char four[] = "....-";
-char five[] = ".....";
-char six[] = "-....";
-char seven[] = "--...";
-char eight[] = "---..";
-char nine[] = "----.";
-char zero[] = "-----";
+extern MorseCode morse_map[]; 
+
+extern const size_t morse_map_size;
+
+#endif
